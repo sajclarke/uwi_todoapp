@@ -1,0 +1,26 @@
+<ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Add Task</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list">
+
+        <form ng-submit="addTask()">
+          
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Title</span>
+            <input type="text" placeholder="Title of the task" ng-model="newtodo.title">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Description</span>
+            <input type="text" placeholder="Description of the task" ng-model="newtodo.description">
+          </label>
+
+          <button class="button button-block button-positive" type="submit">Add Task</button>
+
+        </form>
+
+      </div>
+      </ion-content>
+
+  </ion-modal-view>

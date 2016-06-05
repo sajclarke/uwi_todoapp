@@ -1,0 +1,30 @@
+<ion-view view-title="Dashboard">
+
+  <ion-nav-buttons side="right">
+    <button class="button button-clear" ng-click="openTaskModal()">
+    Add Task
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+
+    <h2>To Do</h2>
+    <ion-list>
+      <ion-checkbox ng-model="todo.completed" ng-checked="todo.completed" ng-repeat="todo in todos | filter:false">
+        {{todo.title}}
+        <br />
+        {{todo.description}}
+      </ion-checkbox>
+    </ion-list>
+
+    <h2>Completed</h2>
+    <ion-list>
+      <ion-item ng-repeat="todo in todos | filter:true">
+        {{todo.title}}
+        <br />
+        {{todo.description}}
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
